@@ -1,0 +1,5 @@
+Username:PassSaltHash:SecurityClearance
+Bob:bc4a8f486eab8b8ab23541cf9ee6e03b:1
+Alice:331a096a5216c1502f5e4342064f53eb:3
+Simon:3b1069946830589f88a41017cef430c7:2
+ccc:f6fc4dfb8c739d5f6269f750bb54d913:0
