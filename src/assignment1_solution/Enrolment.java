@@ -105,7 +105,6 @@ public class Enrolment {
     }
     
     public static void main(String[] args) {
-        // TODO code application logic here
         Subject CSIT111 = new Subject("CSIT111", "Programming Fundamentals", 6);
         Subject CSIT113 = new Subject("CSIT113", "Problem Solving", 6);
         Subject CSIT114 = new Subject("CSIT114", "System Analysis", 6);

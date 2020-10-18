@@ -18,7 +18,6 @@ public class StudentSystem {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
         Course bcs,mcs;
         ObjectInputStream ois = null;
         try {
