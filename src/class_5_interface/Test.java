@@ -2,16 +2,16 @@ package class_5_interface;
 
 public class Test {
     public static void main(String[] args) {
-        Student[] students = new Student[4];
-        students[0] = new Kison();
-        students[1] = new Holly();
-        students[2] = new DK();
-        students[3] = new Eric();
+        MyStudent[] myStudents = new MyStudent[4];
+        myStudents[0] = new Kison();
+        myStudents[1] = new Holly();
+        myStudents[2] = new DK();
+        myStudents[3] = new Eric();
 
-        Student[] students2 = students;
-        students[1] = new DK();
+        MyStudent[] students2 = myStudents;
+        myStudents[1] = new DK();
 
-        for(Student st:students){
+        for(MyStudent st: myStudents){
             if(st instanceof KisonAble){
                 KisonAble ka = (KisonAble) st;
                 ka.eat();
@@ -29,7 +29,7 @@ public class Test {
 }
 
 
-class Holly extends Student implements KisonAble, StudyAble{
+class Holly extends MyStudent implements KisonAble, StudyAble{
 
     @Override
     public void eat() {
@@ -42,7 +42,7 @@ class Holly extends Student implements KisonAble, StudyAble{
     }
 }
 
-class Kison extends Student implements KisonAble{
+class Kison extends MyStudent implements KisonAble{
 
     @Override
     public void eat() {
@@ -55,7 +55,7 @@ class Kison extends Student implements KisonAble{
     }
 }
 
-class DK extends Student implements StudyAble, KisonAble{
+class DK extends MyStudent implements StudyAble, KisonAble{
 
     @Override
     public void study() {
@@ -63,7 +63,7 @@ class DK extends Student implements StudyAble, KisonAble{
     }
 }
 
-class Eric extends Student implements StudyAble, KisonAble{
+class Eric extends MyStudent implements StudyAble, KisonAble{
 
     @Override
     public void study() {
@@ -71,7 +71,7 @@ class Eric extends Student implements StudyAble, KisonAble{
     }
 }
 
-abstract class Student implements StudyAble{
+abstract class MyStudent implements StudyAble{
 
 }
 
