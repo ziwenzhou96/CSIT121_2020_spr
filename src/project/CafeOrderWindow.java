@@ -14,7 +14,7 @@ public class CafeOrderWindow extends JFrame{
     private JTextField quantityTF;
     private JList<String> categoryList;
     private JList<Food> itemList;
-//    private JScrollPane itemListScrollPane;
+    private JScrollPane itemListScrollPane;
     private JTextArea descriptionTA;
     private JTextArea orderTA;
     private JButton addBTN;
@@ -68,13 +68,15 @@ public class CafeOrderWindow extends JFrame{
         centerPanel.add(categoryPanel);
 
         itemList=new JList<>(new Food[]{});
-//        itemList.setFixedCellWidth(180);
+        itemList.setFixedCellWidth(180);
         itemList.setVisibleRowCount(7);
         itemList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-//        tempPanel=new JPanel();
-//        itemListScrollPane=new JScrollPane(itemList);
-//        tempPanel.add(itemListScrollPane);
-        JPanel itemPanel=new TitlePanel(new JLabel("Item:"),new JScrollPane(itemList));
+        tempPanel=new JPanel();
+        itemListScrollPane=new JScrollPane(itemList);
+        tempPanel.add(itemListScrollPane);
+//        centerPanel.add(tempPanel);
+        JPanel itemPanel=new TitlePanel(new JLabel("Item:"),tempPanel);
+//        JPanel itemPanel=new TitlePanel(new JLabel("Item:"),new JScrollPane(itemList));
         centerPanel.add(itemPanel);
 
         descriptionTA=new JTextArea();

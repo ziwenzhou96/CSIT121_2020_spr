@@ -21,6 +21,7 @@ public class Item {
 
     public void addQuantity(int quantity){
         this.quantity+=quantity;
+        this.totalPrice+=food.getPrice()*quantity;
     }
 
     @Override
